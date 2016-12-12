@@ -1,5 +1,6 @@
 /*jshint node:true*/
-module.exports = {
+module.exports = function() {
+  return {
   scenarios: [
     {
       name: 'default',
@@ -8,46 +9,6 @@ module.exports = {
       },
       npm: {
         devDependencies: { }
-      }
-    },
-
-    {
-      name: 'ember-lts-2.4',
-      bower: {
-        devDependencies: {
-          'ember': 'components/ember#lts-2-4'
-        },
-        resolutions: {
-          'ember': 'lts-2-4'
-        }
-      },
-      npm: {
-        devDependencies: {
-          'ember-data': '2.4.3'
-        },
-        resolutions: {
-          'ember-data': '2.4.3'
-        }
-      }
-    },
-
-    {
-      name: 'ember-lts-2.8',
-      bower: {
-        dependencies: {
-          'ember': 'components/ember#lts-2-8'
-        },
-        resolutions: {
-          'ember': 'lts-2-8'
-        }
-      },
-      npm: {
-        devDependencies: {
-          'ember-data': '2.8.1'
-        },
-        resolutions: {
-          'ember-data': '2.8.1'
-        }
       }
     },
 
@@ -91,5 +52,5 @@ module.exports = {
         }
       }
     }
-  ]
+  ]};
 };
